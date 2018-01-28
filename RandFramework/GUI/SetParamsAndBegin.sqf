@@ -38,11 +38,8 @@ if (_SaveType == 0) then {
 
 	publicVariable "AdvancedSettings";
 	publicVariable "EnemyFactionData";
-	publicVariable "LoadoutData";
-	publicVariable "LoadoutDataDefault";
-	
 
-	_savePreviousSettings = [iMissionParamType,iMissionParamObjective,iAllowNVG,iMissionParamRepOption,iWeather,iUseRevive,iStartLocation,AdvancedSettings,EnemyFactionData,LoadoutData];
+	_savePreviousSettings = [iMissionParamType,iMissionParamObjective,iAllowNVG,iMissionParamRepOption,iWeather,iUseRevive,iStartLocation,AdvancedSettings,EnemyFactionData];
 	profileNamespace setVariable [worldname + ":PreviousSettings",_savePreviousSettings]; 
 	saveProfileNamespace;
 
@@ -116,10 +113,6 @@ if (_LoadVersion != "") then {
 		if (count SavedData > 12) then { 
 			EnemyFactionData = SavedData select 12; 
 			publicVariable "EnemyFactionData";
-		};
-		if (count SavedData > 13) then { 
-			LoadoutData = SavedData select 13; 
-			publicVariable "LoadoutData";
 		};
 
 

@@ -7,11 +7,6 @@ if (isNil "bAndSoItBegins") then {
 	publicVariable "bAndSoItBegins";	
 };
 
-if (isNil "CustomObjectsSet") then {
-	CustomObjectsSet = false;
-	publicVariable "CustomObjectsSet";	
-};
-
 if (isNil "IntroMusic") then {
 	IntroMusic = selectRandom ThemeAndIntroMusic;
 	publicVariable "IntroMusic";	
@@ -23,6 +18,7 @@ if (isNil "IntroMusic") then {
 	waitUntil {player == player};
 
 	sleep 4;
+
 
 
 	TREND_fnc_MissionSelectLoop = {
@@ -95,7 +91,7 @@ TREND_fnc_BasicInit = {
 		[player, 1, ["ACE_SelfActions"], myaction] call ace_interact_menu_fnc_addActionToObject;
 	}
 	else {
-		_transportChopperActionID = player addAction ["Call for transport chopper",_transportSelectAction,0,0];	
+		_transportChopperActionID = player addAction ["Call for transport chopper",_transportSelectAction];	
 		player setVariable ["callTransportChopperID", _transportChopperActionID];	
 	};
 
@@ -132,19 +128,13 @@ TREND_fnc_BasicInit = {
 player addEventHandler ["Respawn", { [] spawn TREND_fnc_BasicInit; }];
 
 
-waitUntil {bAndSoItBegins && CustomObjectsSet};
+waitUntil {bAndSoItBegins};
 
 endMissionBoard removeAction _actChooseMission;
 
-[player] execVM "RandFramework\setLoadout.sqf";
-
 
 5 fadeMusic 0;
-[] spawn {
-	sleep 5;
-	ace_hearing_disableVolumeUpdate = false; 
-	playMusic "";
-};
+
 
 
 if (isNil "KilledPlayers") then {
@@ -268,12 +258,11 @@ TREND_fnc_GeneralPlayerLoop = {
 				};
 			};
 		};
-		if !(Player getVariable ["callTransportChopperID", -1] in actionIDs player) then {
-		//if ((Player getVariable ["callTransportChopperID", -1]) == -1) then {
+		if ((Player getVariable ["callTransportChopperID", -1]) == -1) then {
 			_transportSelectAction = {
 				[chopper1,true] spawn TRGM_fnc_selectLZ;
 			};
-			_transportChopperActionID = player addAction ["Call for transport chopper",_transportSelectAction,0,0];	
+			_transportChopperActionID = player addAction ["Call for transport chopper",_transportSelectAction];	
 			player setVariable ["callTransportChopperID", _transportChopperActionID];
 		};
 
@@ -520,7 +509,6 @@ TREND_fnc_MissionOverAnimation = {
 		if (_bMissionEnded && !_bAnyPlayersInAOAndAlive) then {_bMissionEndedAndPlayersOutOfAO = true};
 		if (_bMissionEndedAndPlayersOutOfAO) then {
 			_bEnd = true;
-			ace_hearing_disableVolumeUpdate = true; 
 			2 fadeSound 0.1;	
 			playMusic "";
 			0 fadeMusic 1;
@@ -546,11 +534,6 @@ TREND_fnc_MissionOverAnimation = {
 			sleep 10;
 			8 fadeMusic 0;
 			8 fadeSound 1;
-			[] spawn {
-				sleep 8;
-				ace_hearing_disableVolumeUpdate = false; 
-				playMusic "";
-			};
 		};
 		sleep 5;
 	};

@@ -17,7 +17,8 @@ if (_totalRep > 0) then {
 		badPoints = MaxBadPoints; 
 	};
 	publicVariable "badPoints";
-	BadPointsReason = BadPointsReason + format["<br /><t color='#ff0000'>%1 (-%2)</t>",_message,_pointsToAdd]; 
+
+	BadPointsReason = BadPointsReason + format["<br />%1 (%2)",_message,_pointsToAdd]; 
 	publicVariable "BadPointsReason";
 };
 
