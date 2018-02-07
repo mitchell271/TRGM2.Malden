@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=490;
+		nextID=476;
 	};
 	class Camera
 	{
-		pos[]={748.77222,48.298176,12263.375};
-		dir[]={0.03901631,-0.54987186,-0.83448881};
-		up[]={0.02569099,0.83509672,-0.54941773};
-		aside[]={-0.9989993,1.9179188e-006,-0.046708927};
+		pos[]={879.86249,81.391579,12039.913};
+		dir[]={0.044339523,-0.5667643,-0.82284099};
+		up[]={0.030507565,0.82372922,-0.56608361};
+		aside[]={-0.99864811,1.5102996e-006,-0.053815272};
 	};
 };
 binarizationWanted=0;
@@ -77,7 +77,6 @@ addons[]=
 	"A3_Weapons_F_LongRangeRifles_M320",
 	"A3_Weapons_F_Mark_LongRangeRifles_M320_Camo",
 	"A3_Weapons_F_Explosives",
-	"FIR_PilotCrewPack_US",
 	"ace_gforces",
 	"ace_parachute",
 	"A3_Data_F_Exp_A_Virtual",
@@ -90,14 +89,13 @@ addons[]=
 	"A3_Boat_F_Beta_SDV_01",
 	"rhsusf_c_markvsoc",
 	"A3_Boat_F_Exp_Boat_Armed_01",
-	"FIR_F16_F",
-	"FIR_AirWeaponSystem_US"
+	"rhsusf_vehicles"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=53;
+		items=51;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -394,74 +392,64 @@ class AddonsMetaData
 		};
 		class Item42
 		{
-			className="FIR_PilotCrewPack_US";
-			name="FIR_PilotCrewPack_US";
-		};
-		class Item43
-		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item44
+		class Item43
 		{
 			className="A3_Data_F_Exp_A";
 			name="Arma 3 Nexus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item45
+		class Item44
 		{
 			className="ace_refuel";
 			name="ACE3 - Refuel";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item46
+		class Item45
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item47
+		class Item46
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item48
+		class Item47
 		{
 			className="A3_Boat_F_Beta";
 			name="Arma 3 Beta - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item49
+		class Item48
 		{
 			className="rhsusf_c_markvsoc";
 			name="Mark V SOC";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item50
+		class Item49
 		{
 			className="A3_Boat_F_Exp";
 			name="Arma 3 Apex - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item51
+		class Item50
 		{
-			className="FIR_F16_F";
-			name="FIR_F16_F";
-		};
-		class Item52
-		{
-			className="FIR_AirWeaponSystem_US";
-			name="FIR_AirWeaponSystem_US";
+			className="rhsusf_vehicles";
+			name="rhsusf_vehicles";
 		};
 	};
 };
@@ -494,7 +482,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=122;
+		items=118;
 		class Item0
 		{
 			dataType="Marker";
@@ -1097,7 +1085,6 @@ class Mission
 			};
 			id=20;
 			type="B_Plane_Fighter_01_Stealth_F";
-			atlOffset=0.12480736;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7314,8 +7301,104 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
+				position[]={730.7373,30.867001,12229.869};
+				angles[]={0,3.1179197,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=466;
+			type="rhsusf_m1025_d";
+		};
+		class Item110
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={723.13513,30.867001,12230.064};
+				angles[]={0,3.1179197,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=467;
+			type="rhsusf_m1025_d";
+		};
+		class Item111
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={715.21613,30.867001,12229.982};
+				angles[]={0,3.1179197,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=468;
+			type="rhsusf_m1025_d";
+		};
+		class Item112
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={708.30096,30.867001,12229.944};
+				angles[]={0,3.1179197,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=470;
+			type="rhsusf_m1025_d";
+		};
+		class Item113
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={700.69879,30.867001,12230.14};
+				angles[]={0,3.1179197,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=471;
+			type="rhsusf_m1025_d";
+		};
+		class Item114
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={692.77979,30.867001,12230.058};
+				angles[]={0,3.1179197,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=472;
+			type="rhsusf_m1025_d";
+		};
+		class Item115
+		{
+			dataType="Object";
+			class PositionInfo
+			{
 				position[]={682.38788,31.267454,12168.835};
-				angles[]={0,1.5488225,0};
+				angles[]={-0,1.5488225,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7349,13 +7432,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item110
+		class Item116
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={662.51691,31.267454,12190.188};
-				angles[]={0,1.5488225,0};
+				angles[]={-0,1.5488225,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7389,13 +7472,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item111
+		class Item117
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={682.14178,31.267454,12191.19};
-				angles[]={0,1.5488225,0};
+				angles[]={-0,1.5488225,0};
 			};
 			side="Empty";
 			flags=4;
@@ -7428,161 +7511,6 @@ class Mission
 				};
 				nAttributes=1;
 			};
-		};
-		class Item112
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={739.53815,30.745663,12226.818};
-				angles[]={-0,3.7282898,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=477;
-			type="FIR_F16C_Blank";
-		};
-		class Item113
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={738.9646,28.940435,12237.258};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=478;
-			type="FIR_Baseplate";
-		};
-		class Item114
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={725.43738,28.940435,12237.164};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=482;
-			type="FIR_Baseplate";
-		};
-		class Item115
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={726.01093,30.745663,12226.725};
-				angles[]={-0,3.7282898,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=483;
-			type="FIR_F16C_Blank";
-		};
-		class Item116
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={711.72693,28.940435,12237.463};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=484;
-			type="FIR_Baseplate";
-		};
-		class Item117
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={712.30048,30.745663,12227.023};
-				angles[]={-0,3.7282898,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=485;
-			type="FIR_F16C_Blank";
-		};
-		class Item118
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={697.92981,28.940435,12237.348};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=486;
-			type="FIR_Baseplate";
-		};
-		class Item119
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={698.50336,30.745663,12226.908};
-				angles[]={-0,3.7282898,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=487;
-			type="FIR_F16C_Blank";
-		};
-		class Item120
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={683.90271,28.940435,12237.743};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=488;
-			type="FIR_Baseplate";
-		};
-		class Item121
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={684.47626,30.745663,12227.304};
-				angles[]={-0,3.7282898,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=489;
-			type="FIR_F16C_Blank";
 		};
 	};
 	class Connections
